@@ -2,11 +2,14 @@
   "name": "Test Dev Container",
   "dockerFile": "Dockerfile",
   "context": "..",
-  "remoteUser": "root",
+  "remoteUser": "vscode",   // root ではなく vscode ユーザーを推奨
   "forwardPorts": [3000],
   "extensions": [
-    "esbenp.prettier-vscode",   // Prettier
-    "dbaeumer.vscode-eslint",   // ESLint
-    "ms-vscode.vscode-typescript-next" // TypeScript
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next"
+  ],
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
   ]
 }
