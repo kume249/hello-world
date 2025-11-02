@@ -1,0 +1,12 @@
+{
+  "name": "Test Dev Container",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "remoteUser": "root",
+  "forwardPorts": [3000],
+  "extensions": [
+    "esbenp.prettier-vscode",   // Prettier
+    "dbaeumer.vscode-eslint",   // ESLint
+    "ms-vscode.vscode-typescript-next" // TypeScript
+  ]
+}
