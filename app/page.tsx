@@ -10,7 +10,7 @@ export default function Page() {
       <button
         onClick={() => signIn("google", { prompt: "login" })}
       >
-        Googleでログイン（毎回パスワード入力）
+        Googleでログイン
       </button>
     );
   }
